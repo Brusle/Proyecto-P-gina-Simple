@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu Trivia</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+    <header>
+        <h1>Crea tu Propia Trivia</h1>
+        <div class="user-info">
+            <span id="welcome-message"></span>
+            <button id="logout-btn">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <form id="trivia-generator-form" class="generator-form">
+            <h2>Personaliza tu Juego</h2>
+            
+            <div class="form-group">
+                <label for="amount">Número de Preguntas (1-50):</label>
+                <input type="number" id="amount" name="amount" min="1" max="50" value="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Categoría:</label>
+                <select id="category" name="category">
+                    <option value="">Cualquier Categoría</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label for="difficulty">Dificultad:</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="">Cualquiera</option>
+                    <option value="easy">Fácil</option>
+                    <option value="medium">Media</option>
+                    <option value="hard">Difícil</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="type">Tipo de Pregunta:</label>
+                <select id="type" name="type">
+                    <option value="">Cualquiera</option>
+                    <option value="multiple">Opción Múltiple</option>
+                    <option value="boolean">Verdadero / Falso</option>
+                </select>
+            </div>
+
+            <button type="submit">¡Generar Preguntas!</button>
+        </form>
+    </main>
+    <script src="principal.js"></script>
+</body>
+</html>
