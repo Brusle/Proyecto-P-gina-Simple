@@ -13,7 +13,8 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Images/fondo.jpg');
+    /* RUTA CORREGIDA: Asume que tienes una carpeta 'Images' al mismo nivel que 'base' */
+    background-image: url('../Images/fondo.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(0.2s) brightness(0.8);
@@ -39,7 +40,7 @@ body, html {
 .form-box h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #FFDAB9; /* Amarillo pastel claro */
+    color: #FFB6B9; /* Rojo pastel */
 }
 
 .input-group {
@@ -68,7 +69,7 @@ button {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: #FFB6B9; /* Rojo/Rosa pastel */
+    background-color: #FFB6B9; /* Rojo pastel */
     color: #4D4D4D;
     font-size: 16px;
     font-weight: bold;
@@ -77,7 +78,7 @@ button {
 }
 
 button:hover {
-    background-color: #FAABAE; /* Un poco más oscuro al pasar el ratón */
+    background-color: #FAABAE; /* Rojo pastel más oscuro */
     transform: scale(1.02);
 }
 
@@ -88,7 +89,7 @@ button:hover {
 }
 
 .toggle-link a {
-    color: #B9FBC0; /* Verde pastel */
+    color: #FFB6B9; /* Rojo pastel */
     text-decoration: none;
     font-weight: bold;
 }

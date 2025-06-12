@@ -1,5 +1,5 @@
-body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #F1F8E9; }
-header { background-color: #C5E1A5; color: #424242; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #FFEBEB; }
+header { background-color: #FFB6B9; color: #424242; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
 .back-link { color: #424242; text-decoration: none; font-weight: bold; }
 main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
 #loading-message { text-align: center; font-size: 1.2rem; }
@@ -14,7 +14,7 @@ main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
     color: #333;
     font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border-left: 5px solid #FFCC80; /* Amarillo pastel */
+    border-left: 5px solid #FFB6B9; /* Rojo pastel */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -25,13 +25,13 @@ main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
 
 /* Estilos para preguntas ya respondidas */
 .question-item.answered.correct {
-    border-left-color: #A5D6A7; /* Verde pastel */
+    border-left-color: #A5D6A7; /* Verde pastel para correcto */
     background-color: #E8F5E9;
     color: #555;
 }
 
 .question-item.answered.incorrect {
-    border-left-color: #EF9A9A; /* Rojo pastel */
+    border-left-color: #F88379; /* Rojo pastel más oscuro para incorrecto */
     background-color: #FFEBEE;
     color: #555;
 }

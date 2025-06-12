@@ -2,15 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Guardia de ruta
     const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
     if (!loggedInUser) {
-        window.location.href = 'index.html';
+        window.location.href = '../base/index.html';
         return;
     }
 
-    // Bienvenida y logout
+    // Bienvenida y logout (Aquí también se limpia la sesión completa)
     document.getElementById('welcome-message').textContent = `Hola, ${loggedInUser.username}`;
     document.getElementById('logout-btn').addEventListener('click', () => {
-        sessionStorage.clear();
-        window.location.href = 'index.html';
+        sessionStorage.clear(); // Esto borra TODO, incluidas las preguntas
+        window.location.href = '../base/index.html';
     });
 
     const categorySelect = document.getElementById('category');
@@ -36,8 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Manejar el envío del formulario ---
     generatorForm.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        // **CAMBIO IMPORTANTE: Borra las preguntas anteriores antes de generar nuevas**
+        sessionStorage.removeItem('triviaQuestions');
         
-        // Construir los parámetros de la URL
         const params = new URLSearchParams();
         params.append('amount', document.getElementById('amount').value);
         
@@ -50,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const type = document.getElementById('type').value;
         if (type) params.append('type', type);
 
-        // Redirigir a la página de preguntas con los parámetros
-        window.location.href = `preguntas.html?${params.toString()}`;
+        window.location.href = `../preguntas/preguntas.html?${params.toString()}`;
     });
 
     loadCategories();

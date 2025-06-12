@@ -1,12 +1,12 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-color: #FFF9C4; /* Amarillo pastel muy claro */
+    background-color: #FFEBEB; /* Fondo Rojo Pastel muy claro */
     color: #333;
 }
 
 header {
-    background-color: #FFCC80; /* Amarillo/Naranja pastel */
+    background-color: #FFB6B9; /* Rojo pastel */
     color: #424242;
     padding: 1rem 2rem;
     display: flex;
@@ -16,7 +16,7 @@ header {
 }
 
 #logout-btn {
-    background-color: #EF9A9A; /* Rojo pastel */
+    background-color: #F88379; /* Rojo pastel más oscuro */
     color: white;
 }
 
@@ -38,7 +38,7 @@ main {
 
 .generator-form h2 {
     text-align: center;
-    color: #FFA726; /* Naranja pastel */
+    color: #F88379; /* Rojo pastel más oscuro */
     margin-bottom: 1.5rem;
 }
 
@@ -63,6 +63,7 @@ main {
 
 .generator-form button {
     margin-top: 1rem;
-    background-color: #AED581; /* Verde pastel */
+    background-color: #FFB6B9; /* Rojo pastel */
     font-weight: bold;
+    color: #4D4D4D;
 }
