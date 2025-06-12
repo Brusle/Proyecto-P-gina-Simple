@@ -25,13 +25,13 @@ main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
 
 /* Estilos para preguntas ya respondidas */
 .question-item.answered.correct {
-    border-left-color: #A5D6A7; /* Verde pastel para correcto */
-    background-color: #E8F5E9;
+    border-left-color: #7ade7d; /* Verde pastel para correcto */
+    background-color: #9aefa1;
     color: #555;
 }
 
 .question-item.answered.incorrect {
-    border-left-color: #F88379; /* Rojo pastel más oscuro para incorrecto */
-    background-color: #FFEBEE;
+    border-left-color: #f26868; /* Rojo pastel más oscuro para incorrecto */
+    background-color: #f695a3;
     color: #555;
 }

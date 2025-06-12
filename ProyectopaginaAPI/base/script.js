@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencias a los formularios y enlaces
+    // =================================================================
+    //            NUEVA LÓGICA PARA FONDO ALEATORIO
+    // =================================================================
+    const backgroundContainer = document.querySelector('.background-container');
+    
+    // Lista con los nombres de tus 10 imágenes
+    const images = [
+        'fondo1.jpg', 'fondo2.jpg', 'fondo3.jpg', 'fondo4.jpg', 'fondo5.jpg',
+        'fondo6.jpg', 'fondo7.jpg', 'fondo8.jpg', 'fondo9.jpg', 'fondo10.jpg'
+    ];
+
+    // Escoge un índice aleatorio del array de imágenes
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const selectedImage = images[randomIndex];
+    
+    // Construye la ruta y la aplica al contenedor del fondo
+    // Esta ruta asume que tienes: ProyectopaginaAPI/Images/fondoX.jpg
+    const imagePath = `../Images/${selectedImage}`;
+    backgroundContainer.style.backgroundImage = `url('${imagePath}')`;
+
+    // =================================================================
+    //      FIN DE LA LÓGICA PARA FONDO ALEATORIO
+    // =================================================================
+
+
+    // Referencias a los formularios y enlaces (código existente)
     const loginForm = document.getElementById('login-form');
     const registerForm = document.getElementById('register-form');
     const showRegisterLink = document.getElementById('show-register');
@@ -55,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (user) {
             sessionStorage.setItem('loggedInUser', JSON.stringify(user));
-            // RUTA CORREGIDA: Salir de 'base' (../) y entrar a 'principal'
+            // Redirige a la página principal
             window.location.href = '../principal/principal.html';
         } else {
             alert('Correo o contraseña incorrectos.');

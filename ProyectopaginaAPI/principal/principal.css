@@ -15,10 +15,22 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#logout-btn {
-    background-color: #F88379; /* Rojo pastel más oscuro */
-    color: white;
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Aumentado el espacio */
 }
+
+/* =================================================================== */
+/* NUEVOS ESTILOS PARA MENSAJE DE BIENVENIDA              */
+/* =================================================================== */
+#welcome-message {
+    font-size: 1.1em; /* Más grande */
+    font-weight: 700; /* Equivalente a 'bold' */
+    color: #333;
+}
+/* =================================================================== */
+
 
 main {
     display: flex;
@@ -61,9 +73,50 @@ main {
     box-sizing: border-box;
 }
 
-.generator-form button {
-    margin-top: 1rem;
-    background-color: #FFB6B9; /* Rojo pastel */
+/* =================================================================== */
+/* NUEVOS ESTILOS UNIFICADOS PARA BOTONES                 */
+/* =================================================================== */
+
+/* 1. Estilo base que ambos botones compartirán */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
     font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 2. Estilo para el botón de acción principal (Generar) */
+.btn-primary {
+    background-color: #FFB6B9; /* Rojo pastel */
     color: #4D4D4D;
+    width: 100%; /* Para que ocupe todo el ancho del formulario */
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #FAABAE; /* Tono más oscuro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+/* 3. Estilo para el botón de cerrar sesión (Logout) */
+.btn-logout {
+    background-color: transparent;
+    border-color: #424242; /* Borde del color del texto */
+    color: #424242;
+}
+
+.btn-logout:hover {
+    background-color: #424242;
+    color: white;
+}
+
+/* Eliminamos los estilos viejos y específicos para evitar conflictos */
+#logout-btn, .generator-form button {
+    /* Los estilos ahora vienen de las clases .btn, .btn-primary, y .btn-logout */
 }
