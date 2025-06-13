@@ -1,7 +1,7 @@
 body { 
     font-family: 'Segoe UI', sans-serif; 
     margin: 0; 
-    background-color: #FFEBEB; 
+    background-color: #f8e9f3; 
 }
 
 header { 
@@ -71,13 +71,14 @@ main {
 }
 
 .question-item.answered.correct {
-    border-left-color: #A5D6A7; /* Verde pastel para correcto */
-    background-color: #E8F5E9;
-    color: #555;
+    border-left-color: #87df8a; /* Verde pastel para correcto */
+    background-color: #b1fab7;
+    color: #1c1919;
+
 }
 
 .question-item.answered.incorrect {
-    border-left-color: #EF9A9A; /* Rojo pastel para incorrecto */
-    background-color: #FFEBEE;
-    color: #555;
+    border-left-color: #d65151; /* Rojo pastel para incorrecto */
+    background-color: #fa9595;
+    color: #1c1919;
 }
